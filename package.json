@@ -1,0 +1,23 @@
+{
+  "name": "modern-js-modules-tooling",
+  "version": "1.0.0",
+  "description": "",
+  "main": "clean.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/dandresavid/modern-js-modules-tooling.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dandresavid/modern-js-modules-tooling/issues"
+  },
+  "homepage": "https://github.com/dandresavid/modern-js-modules-tooling#readme",
+  "dependencies": {
+    "leaflet": "^1.8.0",
+    "lodash-es": "^4.17.21"
+  }
+}
