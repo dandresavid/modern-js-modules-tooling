@@ -18,6 +18,7 @@
 // add('Pizza', 2);
 // add('bread', 5);
 // add('apples', 4);
+
 // console.log(cart);
 
 // await in this case is bloacking the execution
@@ -85,7 +86,9 @@ console.log(ShoppingCart2.shippingCost); //undefined
 //Import NodeJS
 // const {addToCart} = require('./shoppingCart.js')
 
-import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
+// Don't do this V
+//import cloneDeep from './node_modules/lodash-es/cloneDeep.js';
+import cloneDeep from 'lodash-es';
 
 const state = {
     cart: [
@@ -100,4 +103,24 @@ const stateDeepClone = cloneDeep(state);
 state.user.loggedIn = false;
 console.log(stateClone);
 console.log(stateDeepClone);
+
+if(module.hot) {
+    module.hot.accept();
+}
+
+class Person{
+    #greeting = 'Hey'
+    constructor(name) {
+        this.name = name;
+        console.log(`${this.greeting}, ${this.name}`)
+    }
+}
+
+const jonas = new Person('Jonas');
+console.log('Jonas' ?? null);
+
+import 'core-js/stable';
+
+// Polifilling async fuctions
+import 'regenerator-runtime/runtime'
 
